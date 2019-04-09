@@ -1,13 +1,13 @@
 <template>
-  <div>home</div>
+  <div>资金统计</div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+  name: ''
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
 </style>
