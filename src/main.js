@@ -10,7 +10,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import api from './api'
 import './styles/reset.scss'
 
+import ElementUI from 'element-ui'
+
 import QueryBar from '@/components/QueryBar'
+
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 

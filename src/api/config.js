@@ -7,23 +7,25 @@ http.defaults.baseURL = 'http://10.10.17.100:8080'
 
 // 处理发送ajax请求前操作
 http.interceptors.request.use(
-	config => {
-		return config
-	},
-	err => {
-		return err
-	}
+  config => {
+    return config
+  },
+  err => {
+    return err
+  }
 )
 
 // 处理接口返回时操作
 http.interceptors.response.use(
-	data => {
-		return data
-	},
-	err => {
-		return err
-	}
+  data => {
+    return data
+  },
+  err => {
+    return err
+  }
 )
+
+const xhr = {
 
 /**
  * get请求
@@ -31,44 +33,46 @@ http.interceptors.response.use(
  * @param params
  * @returns {AxiosPromise}
  */
-export const getRequest = (url, params) => {
-  return http({
-    method: 'get',
-    url: url,
-    params
-  })
-}
+  getRequest: (url, params) => {
+    return http({
+      method: 'get',
+      url: url,
+      params
+    })
+  },
 
-/**
+  /**
  * post请求
  * @param url
  * @param params
  * @returns {AxiosPromise}
  */
-export const postRequest = (url, params) => {
-  return http({
-    method: 'post',
-    url: url,
-    data: params,
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
-    }
-  })
-}
+  postRequest: (url, params) => {
+    return http({
+      method: 'post',
+      url: url,
+      data: params,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+      }
+    })
+  },
 
-/**
+  /**
  * delete请求
  * @param url
  * @param params
  * @returns {AxiosPromise}
  */
-export const deleteRequest = (url, params) => {
-  return http({
-    method: 'delete',
-    url: url,
-    data: params,
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
-    }
-  })
+  deleteRequest: (url, params) => {
+    return http({
+      method: 'delete',
+      url: url,
+      data: params,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+      }
+    })
+  }
 }
+export default xhr
