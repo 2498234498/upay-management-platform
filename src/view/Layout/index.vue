@@ -2,9 +2,9 @@
   <div class="layout">
     <navbar class="navbar"></navbar>
     <div class="app-wrapper">
+      <tags-view></tags-view>
       <sidebar class="sider-container"></sidebar>
       <div class="main-container">
-        <tags-view></tags-view>
         <app-main></app-main>
       </div>
     </div>
@@ -31,22 +31,22 @@ export default {
 .layout {
   height: 100%;
   width: 100%;
+  overflow: hidden;
   .navbar {
     width: 100%;
   }
   .app-wrapper {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
     .sider-container {
       height: 100%;
       width: 200px;
-      // background: red;
+      background: #eaedf1;
       float: left;
     }
     .main-container {
-      height: 100%;
+      height: 100;
       width: calc(100% - 200px);
-      // background: #000;
       float: left;
     }
   }

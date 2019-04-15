@@ -8,8 +8,13 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/',
+      redirect: {
+        path: '/statisticalAnalysis'
+      }
+    },
+    {
       path: '/statisticalAnalysis',
-      name: 'StatisticalAnalysis',
       component: Layout,
       meta: { title: '统计分析' },
       children: [
@@ -41,7 +46,6 @@ export default new Router({
     },
     {
       path: '/userCenter',
-      name: 'UserCenter',
       component: Layout,
       meta: { title: '用户中心' },
       children: [
@@ -67,7 +71,6 @@ export default new Router({
     },
     {
       path: '/collectionAccountManagement',
-      name: 'CollectionAccountManagement',
       component: Layout,
       meta: { title: '归集账号管理' },
       children: [
@@ -87,7 +90,6 @@ export default new Router({
     },
     {
       path: '/orderCenter',
-      name: 'OrderCenter',
       component: Layout,
       meta: { title: '订单中心' },
       children: [
@@ -113,7 +115,6 @@ export default new Router({
     },
     {
       path: '/channelManagement',
-      name: 'ChannelManagement',
       component: Layout,
       meta: { title: '通道管理' },
       children: [
@@ -139,7 +140,6 @@ export default new Router({
     },
     {
       path: '/reconciliationCenter',
-      name: 'ReconciliationCenter',
       component: Layout,
       meta: { title: '对账中心' },
       children: [
@@ -207,7 +207,6 @@ export default new Router({
     },
     {
       path: '/systemManagement',
-      name: 'SystemManagement',
       component: Layout,
       meta: { title: '系统管理' },
       children: [
